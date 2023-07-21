@@ -2,7 +2,7 @@
 A systemd unit file for managing Syncthing for Windows. Why would anyone create such an unholy thing?
 
 ## Background
-On systems running Windows Subsystem for Linux, I’ve long found it necessary to run both Linux and Windows versions of Syncthing, because the Linux version has trouble watching the Windows filesystem and vice versa. I resisted this for a long time, because I worried that running both versions concurrently would be complicated. Turns out, all you have to do is change the GUI port for one version, which is defined by a single line in `config.xml`. I installed the web interfaces for both versions like PWA’s, and I was off to the proverbial races.
+On systems running Windows Subsystem for Linux, I’ve long found it necessary to run both Linux and Windows versions of Syncthing, because the Linux version has trouble watching the Windows filesystem and vice versa. I resisted this for a long time, because I worried that running both versions concurrently would be complicated. Turns out, all you have to do is change the GUI port for one version, which is defined by a single line in `config.xml`. I installed the web interfaces for both versions like PWA’s, and Bob was my proverbial uncle.
 
 **Of course, just because the setup doesn’t have to be complicated doesn’t mean I won’t find a way to *make* it complicated.** I became a bit obsessed with figuring out the best way to “organize” the two daemons, especially since Windows doesn’t provide a straightforward way to run a console application like Syncthing in the background.
 
