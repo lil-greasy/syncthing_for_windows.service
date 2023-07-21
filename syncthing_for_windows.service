@@ -1,0 +1,14 @@
+[Unit]
+Description=The *Windows* version of Syncthing
+After=network.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=5
+ExecStart=/bin/bash -c '[** THE PATH TO YOUR WINDOWS SYNCTHING EXECUTABLE **]/syncthing.exe --no-browser'
+ExecStop=/mnt/c/Windows/system32/WindowsPowerShell/v1.0/powershell.exe 'Invoke-RestMethod -Method "Post" -Headers @{"X-API-Key"="[** YOUR API KEY **]"} -Uri "http://localhost:8384/rest/system/shutdown"'
+
+[Install]
+WantedBy=multi-user.target
