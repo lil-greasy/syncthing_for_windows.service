@@ -14,4 +14,4 @@ As it happens, the Linux version of Syncthing comes with a systemd unit file, wh
 
 ## Usage notes
 * You’ve got to customize `ExecStart=` to reflect the location of your Syncthing executable, which probably starts with “`/mnt/c/`”.
-* You’ve got to customize `ExecStop=` to reflect your API key, which is in the `[gui]` section of your config.xml. If you’ve changed the port for your Syncthing GUI, the command will also have to reflect that.
+* You’ve got to customize `ExecStop=` to reflect your API key, which is in the `[gui]` section of your `config.xml`. If you’ve changed the port for your Syncthing GUI, the command will also have to reflect that.
