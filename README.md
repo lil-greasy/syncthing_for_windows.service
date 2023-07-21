@@ -17,4 +17,4 @@ As it happens, the Linux version of Syncthing comes with a systemd unit file, wh
 * You’ve got to customize `ExecStop=` to reflect your API key, which is in the `[gui]` section of your `config.xml`. If you’ve changed the port for your Syncthing GUI, the command will also have to reflect that.
 
 ## Miscellaneous notes
-* Why does `ExecStop=` invoke PowerShell instead of simply using curl? Because, although Windows processes can find Linux services at localhost/127.0.0.7 just fine, the reverse is generally not true. It took me all these years to notice, becausee it almost always feels more natural to run network services from Linux anyway.
+* Why does `ExecStop=` invoke PowerShell instead of simply using curl? Because, although Windows processes can find Linux services at localhost/127.0.0.7 just fine, the reverse is generally not true. It took me all these years to notice, because it almost always feels more natural to run network services from Linux anyway.
